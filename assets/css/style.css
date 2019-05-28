@@ -1,0 +1,45 @@
+h1 {
+    background-color: aquamarine;
+    color: palevioletred;
+    font-family: fantasy;
+}
+
+p {
+    background-color: thistle;
+    color: green;
+
+}
+
+h2 {
+    font-size: 30px;
+    padding: 10px;
+    background-color: lightgreen;
+    float: left;
+    width: 230px;
+    height: 80px;
+}
+
+#div {
+    margin: 5px;
+    padding: 10px;
+    background-color: beige;
+    float: left;
+    width: 130px;
+    height: 80px
+}
+
+#images {
+    clear: both;
+}
+
+#score {
+    color: black;
+    font-size: 30px;
+    width: 230px;
+    height: 80px;
+}
+
+#headerimage {
+height: 180px;
+width: 400px;
+}
