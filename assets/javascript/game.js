@@ -11,14 +11,12 @@ function randomNumGenerator(min, max) {
 }
 
 
-
-
 // when the user clicks on the gems 
 $(".gems").on("click", function () {
-    // btnVal.parseInt($(this).val()); NEED TO FIX THIS
+    btnVal = parseInt($(this).val());
     console.log(btnVal);
     score = score + btnVal;
-    $("#score").text();
+    $("#score").text(score);
 
     // check if the score matches the random number
     if (score === randomNum) {
