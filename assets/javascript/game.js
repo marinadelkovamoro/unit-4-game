@@ -22,14 +22,14 @@ $(".gems").on("click", function () {
     if (score === randomNum) {
         // alert("You won!")
         wins++;
-        $("#score").text("🏆 You won! 🏆");
+        alert("🏆 You won! 🏆");
         $("#wins-num").text(wins);
         resetGame();
 
     } else if (score > randomNum) {
         // alert("You lost!")
         losses++;
-        $("#score").text("😿 You lost! 😿");
+        alert("😿 You lost! 😿");
         $("#losses-num").text(losses);
         resetGame();
     }
@@ -37,7 +37,7 @@ $(".gems").on("click", function () {
     // reset the game and assign a new random number between 1 and 100
     function resetGame() {
         
-        randomNum = Math.floor(Math.random() * 100) + 1;
+        randomNum = randomNumGenerator(1, 100);
         // display on the page
         $("#randomNumber").text(randomNum);
         // reset the score to 0
@@ -45,10 +45,10 @@ $(".gems").on("click", function () {
         // display the new score on the page
         $("#score").text(score);
 
-        // setting the gems with random numbers
-        for (var i = 0; i < $(".gems").length; i++) {
+        // setting the gems with NEW random numbers
+        for (var i = 0; i <= $(".gems").length; i++) {
             var gemNum = randomNumGenerator(1, 12);
-            $("button-" + i).val(gemNum);
+            $("#button-" + i).val(gemNum);
         }
     }
 
